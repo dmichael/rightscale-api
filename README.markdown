@@ -12,6 +12,7 @@ At the moment only GET requests are implemented.
     password = 'opensezme'
      
     rightscale  = RightScale::Client.new(account, username, password)
+    
     deployments = rightscale.deployments
     servers     = rightscale.servers
     right_scripts = rightscale.right_scripts
