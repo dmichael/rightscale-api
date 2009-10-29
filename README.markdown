@@ -6,6 +6,7 @@ It, like the RightScale API itself is a little incomplete. It should however be 
 Below is an example of usage. Please contact if with bug reports or if you would like to contribute.
 
 At the moment only GET requests are implemented.
+Depends upon [HTTParty](http://github.com/jnunemaker/httparty)
 
     account  = 1234
     username = 'alibaba@example.com'
