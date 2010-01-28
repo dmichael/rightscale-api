@@ -13,5 +13,5 @@ require dir + 'rightscale/client'
 require dir + 'rightscale/deployments'
 require dir + 'rightscale/servers'
 require dir + 'rightscale/right_scripts'
-
+require dir + 'rightscale/statuses'
 

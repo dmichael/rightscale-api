@@ -8,12 +8,22 @@ module RightScale
     end
 
     def get(path, options={})
+      request :get, path, options
+    end
+    
+    def post(path, options={})
+      request :post, path, options
+    end
+    
+    def request(method, path, options={})
       options.merge!({
         :basic_auth => {:username => @email, :password => @password},
         :headers    => {'X-API-VERSION' => '1.0'}
       })
-      
-      self.class.get("#{path}", options)
+
+      response = self.class.send(method, "#{path}", options)
+      # puts response.inspect
+      return response
     end
   
     def deployments  

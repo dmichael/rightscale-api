@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{rightscale-api}
-  s.version = "0.0.1"
+  s.version = "0.2.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["David Michael"]
-  s.date = %q{2009-10-30}
+  s.date = %q{2010-01-28}
   s.description = %q{A Ruby Wrapper for the RightScale API}
   s.email = %q{david.michael@sonymusic.com}
   s.extra_rdoc_files = [
@@ -17,6 +17,7 @@ Gem::Specification.new do |s|
   ]
   s.files = [
     "README.markdown",
+     "Rakefile",
      "VERSION",
      "lib/rightscale.rb",
      "lib/rightscale/api.rb",
@@ -24,7 +25,9 @@ Gem::Specification.new do |s|
      "lib/rightscale/deployments.rb",
      "lib/rightscale/right_scripts.rb",
      "lib/rightscale/servers.rb",
-     "lib/rightscale/statuses.rb"
+     "lib/rightscale/statuses.rb",
+     "pkg/rightscale-api-0.0.1.gem",
+     "rightscale-api.gemspec"
   ]
   s.homepage = %q{http://github.com/dmichael/rightscale-api}
   s.rdoc_options = ["--charset=UTF-8"]

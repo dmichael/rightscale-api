@@ -15,9 +15,10 @@ module RightScale
     end
     
     def show(identifier)
-      puts formatted_uri(identifier)
+      # puts formatted_uri(identifier)
       response = client.get formatted_uri(identifier)
-      return response["#{@singular}"]
+
+      return response["#{@singular}"] || response
     end
     
     def create

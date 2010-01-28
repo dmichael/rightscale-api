@@ -18,6 +18,7 @@ module RightScale
       query[:server].merge(params) if !params.empty?
 
       response = client.post("/servers/#{identifier}/run_script", :query => query)
+      return response
     end
     
     def attach_volume(ec2_ebs_volume_href, device)
