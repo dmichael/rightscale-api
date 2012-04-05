@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{rightscale-api}
-  s.version = "0.2.0"
+  s.version = "0.4.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["David Michael"]
-  s.date = %q{2010-01-28}
+  s.date = %q{2010-03-11}
   s.description = %q{A Ruby Wrapper for the RightScale API}
   s.email = %q{david.michael@sonymusic.com}
   s.extra_rdoc_files = [
@@ -19,13 +19,13 @@ Gem::Specification.new do |s|
     "README.markdown",
      "Rakefile",
      "VERSION",
-     "lib/rightscale.rb",
-     "lib/rightscale/api.rb",
-     "lib/rightscale/client.rb",
-     "lib/rightscale/deployments.rb",
-     "lib/rightscale/right_scripts.rb",
-     "lib/rightscale/servers.rb",
-     "lib/rightscale/statuses.rb",
+     "lib/rightscale-api.rb",
+     "lib/rightscale-api/api.rb",
+     "lib/rightscale-api/client.rb",
+     "lib/rightscale-api/deployments.rb",
+     "lib/rightscale-api/right_scripts.rb",
+     "lib/rightscale-api/servers.rb",
+     "lib/rightscale-api/statuses.rb",
      "pkg/rightscale-api-0.0.1.gem",
      "rightscale-api.gemspec"
   ]
@@ -40,9 +40,12 @@ Gem::Specification.new do |s|
     s.specification_version = 3
 
     if Gem::Version.new(Gem::RubyGemsVersion) >= Gem::Version.new('1.2.0') then
+      s.add_runtime_dependency(%q<httparty>, [">= 0"])
     else
+      s.add_dependency(%q<httparty>, [">= 0"])
     end
   else
+    s.add_dependency(%q<httparty>, [">= 0"])
   end
 end
 
