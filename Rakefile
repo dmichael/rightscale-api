@@ -1,3 +1,5 @@
+$LOAD_PATH.unshift File.join(File.dirname(__FILE__), 'lib', 'rightscale-api')
+
 begin
   require 'jeweler'
   Jeweler::Tasks.new do |gemspec|
@@ -7,6 +9,7 @@ begin
     gemspec.email = "david.michael@sonymusic.com"
     gemspec.homepage = "http://github.com/dmichael/rightscale-api"
     gemspec.authors = ["David Michael"]
+    gemspec.add_dependency "httparty"
   end
   Jeweler::GemcutterTasks.new
 rescue LoadError
